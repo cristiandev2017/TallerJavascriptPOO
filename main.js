@@ -15,10 +15,30 @@ let arregloElectros = [];
 let arregloNeveras = [];
 let arreglotvs = [];
 
-let sw;
-while (sw === "terminar") {
-
+let sw = 'terminar';
+if (sw == "terminar") {
+    console.log("Buenas tardes por favor ingrese, 1.Electro | 2. Nevera | 3. TV");
+    process.stdin.on('data', function(data) {
+        if (data == 1) {
+            console.log("Ingreso Electro")
+        } else if (data == 2) {
+            console.log("Entraste a Nevera")
+        } else {
+            console.log("Entraste a Televisor")
+        }
+        /*
+        process.stdin.on('data', function(data2) {
+            console.log("Ingrese terminar para salir");
+            if (data2 == 'fin') {
+                sw = 'fin'
+                console.log("entre aca");
+            }
+        });
+        */
+    });
 }
+
+
 
 function instanciaElectrodomestico() {
     function electrodomesticopd(i) {
