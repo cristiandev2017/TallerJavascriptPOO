@@ -16,7 +16,7 @@ module.exports = class Electrodomestico {
     }
 
     prueba() {
-        this.consumo;
+        return 100;
     }
 
     precioPorConsumo() {

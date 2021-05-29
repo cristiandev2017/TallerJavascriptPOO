@@ -2,7 +2,7 @@ let Electrodomestico = require("./Electrodomestico");
 
 
 
-class Televisor extends Electrodomestico {
+module.exports = class Televisor extends Electrodomestico {
 
     constructor(consumo, procedencia, tamanio, sintoniza) {
         super(consumo, procedencia);
@@ -27,15 +27,3 @@ class Televisor extends Electrodomestico {
         this.calcularPrecioSintoniza();
     }
 }
-
-
-//require([Electrodomestico])
-//let elec = new Electrodomestico('A', 'Nacional');
-//console.log(elec.prueba());
-
-let tv = new Televisor('A', 'nacional', 100, "no");
-tv.calcularPrecioPulgadas();
-tv.calcularPrecio();
-console.log(tv.precio);
-console.log(tv.consumo, tv.procedencia);
-console.log(tv);
